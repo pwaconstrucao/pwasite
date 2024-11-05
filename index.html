@@ -1,76 +1,42 @@
-
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materiais de Construção</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <script
-  src="https://code.jquery.com/jquery-3.7.1.js"
-  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-  crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        /* Estilos globais */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Cabeçalho */
-        .navbar {
-            background-color: #fff;
-        }
-        
-        .navbar-brand, .nav-link {
-            color: #000 !important;
+            font-family: 'Lato', sans-serif;
         }
 
         /* Banner */
         .banner {
-            background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
-            color: #000;
-            height: 600px;
+            background: url('https://images.pexels.com/photos/7937745/pexels-photo-7937745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+            color: #fff;
+            height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            position: relative;
-        }
-
-        .banner::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .banner h1 {
-            font-size: 3.5rem;
-            z-index: 1;
+            font-weight: 700;
+            font-size: 3em;
+            text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1);
         }
 
-        .banner p {
-            font-size: 1.2rem;
-            margin-top: 15px;
-            z-index: 1;
+        .banner h3 {
+            font-weight: 400;
+            text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4);
         }
 
-        .banner .btn {
-            margin-top: 20px;
-            z-index: 1;
-        }
-
-        /* Seção de produtos */
+        /* Produtos */
         .produtos {
             padding: 60px 0;
-            text-align: center;
         }
 
         .produto-card {
@@ -82,487 +48,207 @@
             transform: scale(1.05);
         }
 
-        .produto-card img {
-            max-height: 200px;
-            object-fit: cover;
+        /* Sobre nós */
+        .sobre-nos {
+            padding: 60px 0;
+            background-color: #f9f9f9;
         }
 
-        /* Depoimentos */
-        .depoimentos {
-            background-color: #f9f9f9;
-            padding: 60px 0;
+        .sobre-nos .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
 
-        .depoimento-item {
-            max-width: 600px;
+        .sobre-nos .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .sobre-nos h2 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .sobre-nos p {
+            max-width: 800px;
             margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
-        .depoimento-item p {
-            font-style: italic;
+        @media (min-width: 768px) {
+            .sobre-nos .content {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .sobre-nos .content img {
+                max-width: 45%;
+                margin-right: 30px;
+            }
         }
 
-        /* Rodapé */
-        .footer {
+        /* Footer */
+        footer {
             background-color: #333;
             color: #fff;
             padding: 20px 0;
-            text-align: center;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contato Info */
+        .contact_info_sec {
+            background-color: #2d2d2d;
+            color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .contact_info_sec h4 {
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .contact_info_sec .info_single {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact_info_sec .info_single i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #ffc107;
+        }
+
+        .contact_info_sec .info_single span {
+            font-size: 1.1rem;
         }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-<div class="initial">
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container">
-      <a class="navbar-brand" href="#"><img src="/logo.png" alt="" width="280"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="#produtos">Produtos</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#depoimentos">Depoimentos</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#contato">Contato</a>
-              </li>
-          </ul>
-      </div>
-  </div>
-</nav>
-<div class="container" >
-  <div id="content">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1>PWA Construções</h1>
-        <h3>Tudo que precisa para o seu lar!</h3>
-        <hr>
-        <!-- <button class="btn btn-default-lg"><i class="fa fa-paw" aria-hidden="true"></i> Get Started</button> -->
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/logocomfundo2.jpg" alt="Logo" width="180"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<div class="container">
- 
+    <!-- Banner -->
+    <header class="banner">
+        <div class="container">
+            <h1>PWA Construções</h1>
+            <h3>Tudo que precisa para o seu lar!</h3>
+        </div>
+    </header>
+
+    <!-- Seção de Sobre Nós -->
+    <section class="sobre-nos">
+        <div class="container">
+            <div class="content">
+                <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sobre nós">
+                <div>
+                    <h2>Sobre Nós</h2>
+                    <p>Nossa trajetória é marcada pelo compromisso com a excelência, inovação e satisfação dos clientes. Trabalhamos lado a lado com construtoras, arquitetos, engenheiros e consumidores finais, garantindo que cada projeto receba os melhores produtos e o suporte técnico especializado que merece.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Seção de Produtos -->
     <section id="produtos" class="produtos">
-      <div class="container">
-          <h2 class="mb-5">Nossos Produtos</h2>
-          <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
-                  <div class="card produto-card">
-                      <img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Produto 1">
-                      <div class="card-body">
-                          <h5 class="card-title">Furadeita de alto impacto</h5>
-                          <p class="card-text">Alta durabilidade e qualidade na sua obra.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                  <div class="card produto-card">
-                      <img src="https://images.pexels.com/photos/1544943/pexels-photo-1544943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Produto 2">
-                      <div class="card-body">
-                          <h5 class="card-title">Aço Reforçado</h5>
-                          <p class="card-text">Ideal para estruturas robustas e seguras.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                  <div class="card produto-card">
-                      <img src="https://ideabrasil.com.br/wp-content/uploads/2018/08/Tijolo-ecologico.jpg" class="card-img-top" alt="Produto 3">
-                      <div class="card-body">
-                          <h5 class="card-title">Tijolos Ecológicos</h5>
-                          <p class="card-text">Sustentabilidade e eficiência para sua obra.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-<div class="bg-light py-5">
-  <div class="container py-5">
-    <h2 class="display-4 font-weight-light">Sobre nós</h2>
-    <p style="text-align: justify;">Nossa trajetória é marcada pelo compromisso com a excelência, inovação e satisfação dos clientes. Trabalhamos lado a lado com construtoras, arquitetos, engenheiros e consumidores finais, garantindo que cada projeto receba os melhores produtos e o suporte técnico especializado que merece.
-    </p>
-    <div class="row align-items-center mb-5">
-      <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
-        <h2 class="font-weight-light">Nossa Missão</h2>
-        <p class="font-italic text-muted mb-4">Ser referência no mercado de materiais de construção, proporcionando aos nossos clientes um atendimento personalizado, estoque diversificado e preços competitivos, contribuindo para o desenvolvimento sustentável do setor.
-      </div>
-      <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="img-fluid mb-4 mb-lg-0"></div>
-    </div>
-    <div class="row align-items-center">
-      <div class="col-lg-5 px-5 mx-auto"><img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="img-fluid mb-4 mb-lg-0"></div>
-      <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
-        <h2 class="font-weight-light">Nossos Valores</h2>
-        <p class="font-italic text-muted mb-4"><b>Qualidade</b>:<br>
-           Selecionamos cuidadosamente nossos fornecedores para assegurar a máxima qualidade em todos os produtos.
-           <br><b>Confiança:</b><br> Construímos relacionamentos sólidos e duradouros baseados na transparência e no respeito.
-           <br><b>Inovação:</b><br> Buscamos constantemente novas tecnologias e tendências para oferecer soluções modernas e eficientes.
-           <br><b>Sustentabilidade:</b><br> Comprometidos com o meio ambiente, promovemos práticas sustentáveis em todas as nossas operações.
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="bg-white py-5">
-  <div class="container py-5">
-    <div class="row mb-4">
-      <div class="col-lg-5">
-        <h2 class="display-4 font-weight-light">Nosso time</h2>
-        <p class="font-italic text-muted">Nosso time conta com os melhores profissionais para te atender.</p>
-      </div>
-    </div>
-    <br>
-    <div class="row text-center">
-      <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5" >
-        <div class="bg-white rounded shadow-sm py-5 px-4" style="max-height:300px;">
-          <h5 class="mb-0">Atendimento Especializado:</h5>
-          <br>
-          <span class="small text-uppercase text-muted">Nossa equipe é composta por profissionais qualificados prontos para auxiliar em todas as etapas do seu projeto.
-          </span>
-        </div>
-      </div>
-      <!-- End-->
-
-       <!-- Team item-->
-       <div class="col-xl-3 col-sm-6 mb-5" >
-        <div class="bg-white rounded shadow-sm py-5 px-4" style="max-height:300px;">
-          <h5 class="mb-0">Variedade de Produtos</h5>
-          <br>
-          <span class="small text-uppercase text-muted">
-            Oferecemos um amplo portfólio que atende às mais diversas necessidades do mercado da construção.</span>
-        </div>
-      </div>
-      <!-- End-->
-
-      <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5" >
-        <div class="bg-white rounded shadow-sm py-5 px-4" style="max-height:300px;">
-          <h5 class="mb-0">Condições Especiais</h5>
-          <br>
-          <span class="small text-uppercase text-muted">
-            Planos de pagamento e parcerias que facilitam a realização do seu empreendimento.
-          </span>
-        </div>
-      </div>
-      <!-- End-->
-
-       <!-- Team item-->
-       <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4" style="max-height:300px;">
-          <h5 class="mb-0">Entrega Rápida</h5>
-          <br>
-          <span class="small text-uppercase text-muted">
-            Logística eficiente para que seus materiais cheguem no prazo certo.
-          </span>
-        </div>
-      </div>
-      <!-- End-->
-    </div>
-  </div>
-</div>
-
-
-  <section class="contact_us">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 offset-md-1">
-                <div class="contact_inner">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <div class="contact_form_inner">
-                                <div class="contact_field">
-                                    <h3>Contatc Us</h3>
-                                    <p>Feel Free to contact us any time. We will get back to you as soon as we can!.</p>
-                                    <input type="text" class="form-control form-group" placeholder="Name" />
-                                    <input type="text" class="form-control form-group" placeholder="Email" />
-                                    <textarea class="form-control form-group" placeholder="Message"></textarea>
-                                    <button class="contact_form_submit">Send</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="right_conatct_social_icon d-flex align-items-end">
-                               <div class="socil_item_inner d-flex">
-                                  <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                               </div>
-                            </div>
+        <div class="container">
+            <h2 class="text-center mb-5">Nossos Produtos</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card produto-card">
+                        <img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Produto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Furadeira de alto impacto</h5>
+                            <p class="card-text">Alta durabilidade e qualidade na sua obra.</p>
                         </div>
                     </div>
-                    <div class="contact_info_sec">
-                        <h4>Contact Info</h4>
-                        <div class="d-flex info_single align-items-center">
-                            <i class="fas fa-headset"></i>
-                            <span>(41) 9919-0097</span>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card produto-card">
+                        <img src="https://images.pexels.com/photos/1544943/pexels-photo-1544943.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Produto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Aço Reforçado</h5>
+                            <p class="card-text">Ideal para estruturas robustas e seguras.</p>
                         </div>
-                        <div class="d-flex info_single align-items-center">
-                            <i class="fas fa-envelope-open-text"></i>
-                            <span>info@flightmantra.com</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card produto-card">
+                        <img src="https://ideabrasil.com.br/wp-content/uploads/2018/08/Tijolo-ecologico.jpg" class="card-img-top" alt="Produto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Tijolos Ecológicos</h5>
+                            <p class="card-text">Sustentabilidade e eficiência para sua obra.</p>
                         </div>
-                        <div class="d-flex info_single align-items-center">
-                            <i class="fas fa-map-marked-alt"></i>
-                            <span>1000+ Travel partners and 65+ Service city across India, USA, Canada & UAE</span>
-                        </div>
-        
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- Seção de Contato -->
+    <section id="contato" class="contact_us py-5 bg-light">
+        <div class="container">
+            <h3 class="text-center">Contato</h3>
+            <p class="text-center mb-4">Fique à vontade para nos contatar a qualquer momento.</p>
+            <div class="contact_info_sec">
+                <h4>Informações de contato</h4>
+                <div class="d-flex info_single align-items-center">
+                    <i class="fas fa-headset"></i>
+                    <span>(41) 9919-0097</span>
+                </div>
+                <div class="d-flex info_single align-items-center">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>pwaconstrucao@financeiropwa.com</span>
+                </div>
+                <div class="d-flex info_single align-items-center">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>Rua Ludovico Geronaso, 1627 - Bairro Boa Vista - CEP: 82650-230</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center py-4">
+            <p>&copy; 2024 PWA - Todos os direitos reservados.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-  <!-- Footer -->
-  <footer class="bg-white">
-    <div class="container py-5">
-      <div class="row py-4">
-        <div class="col-lg-6 col-md-6 mb-4 mb-lg-0"><img src="/logo.png" alt="" width="280" class="mb-3">
-          <p class="font-italic text-muted"><b>CNPJ: 41.284.556/0001-34<br>PWA CONSTRUCOES E COMERCIO DE MATERIAIS LTDA</b></p>
-          <ul class="list-inline mt-4">
-            <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
-            <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
-            <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <h6 class="text-uppercase font-weight-bold mb-4">Links Rápidos</h6>
-          <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="#" class="text-muted">Sobre</a></li>
-            <li class="mb-2"><a href="#" class="text-muted">Produtos</a></li>
-            <li class="mb-2"><a href="#" class="text-muted">Contato</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <h6 class="text-uppercase font-weight-bold mb-4">Empresa</h6>
-          <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="#" class="text-muted">Políticas de privacidade</a></li>
-            <li class="mb-2"><a href="#" class="text-muted">Termos e condições</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Copyrights -->
-    <div class="bg-light py-4">
-      <div class="container text-center">
-        <p class="text-muted mb-0 py-2">© 2024 PWA - Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </footer>
-  <!-- End -->
-</body>
-
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
-html {
-  height: 100%;
-}
-
-
-.initial{
-  background: url(https://images.pexels.com/photos/7937745/pexels-photo-7937745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-  background-size: cover;
-  background-position: center;
-  font-family: 'Lato', sans-serif;
-  color: white;
-  height: 70vh;;
-}
-
-#content {
-  text-align: center;
-  padding-top: 25%;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 5em;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
-}
-
-h3 {
-  text-shadow: 0px 4px 3px black;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
-}
-.phone-number {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Estilo do botão */
-        .btn-custom {
-            border: 2px solid #dc3545;
-            color: #dc3545;
-            background-color: transparent;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .btn-custom:hover {
-            background-color: #dc3545;
-            color: #fff;
-        }
-
-
-        #button-addon1 {
-  color: #ffc371;
-}
-
-i {
-  color: #ffc371;
-}
-
-.form-control::placeholder {
-  font-size: 0.95rem;
-  color: #aaa;
-  font-style: italic;
-}
-
-.form-control.shadow-0:focus {
-  box-shadow: none;
-}
-
-
-body{
-  color:#fff
-}
-.right_conatct_social_icon{
-     background: linear-gradient(to top right, #1325e8 -5%, #8f10b7 100%);
-}
-.contact_us{
-    background-color: #f1f1f1;
-    padding: 120px 0px;
-}
-
-.contact_inner{
-    background-color: #fff;
-    position: relative;
-    box-shadow: 20px 22px 44px #cccc;
-    border-radius: 25px;
-}
-.contact_field{
-    padding: 60px 340px 90px 100px;
-}
-.right_conatct_social_icon{
-    height: 100%;
-}
-
-.contact_field h3{
-   color: #000;
-    font-size: 40px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    margin-bottom: 10px
-}
-.contact_field p{
-    color: #000;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 35px;
-}
-.contact_field .form-control{
-    border-radius: 0px;
-    border: none;
-    border-bottom: 1px solid #ccc;
-}
-.contact_field .form-control:focus{
-    box-shadow: none;
-    outline: none;
-    border-bottom: 2px solid #1325e8;
-}
-.contact_field .form-control::placeholder{
-    font-size: 13px;
-    letter-spacing: 1px;
-}
-
-.contact_info_sec {
-    position: absolute;
-    background-color: #2d2d2d;
-    right: 1px;
-    top: 18%;
-    height: 340px;
-    width: 340px;
-    padding: 40px;
-    border-radius: 25px 0 0 25px;
-}
-.contact_info_sec h4{
-    letter-spacing: 1px;
-    padding-bottom: 15px;
-}
-
-.info_single{
-    margin: 30px 0px;
-}
-.info_single i{
-    margin-right: 15px;
-}
-.info_single span{
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-button.contact_form_submit {
-    background: linear-gradient(to top right, #1325e8 -5%, #8f10b7 100%);
-    border: none;
-    color: #fff;
-    padding: 10px 15px;
-    width: 100%;
-    margin-top: 25px;
-    border-radius: 35px;
-    cursor: pointer;
-    font-size: 14px;
-    letter-spacing: 2px;
-}
-.socil_item_inner li{
-    list-style: none;
-}
-.socil_item_inner li a{
-    color: #fff;
-    margin: 0px 15px;
-    font-size: 14px;
-}
-.socil_item_inner{
-    padding-bottom: 10px;
-}
-
-.map_sec{
-    padding: 50px 0px;
-}
-.map_inner h4, .map_inner p{
-    color: #000;
-    text-align: center
-}
-.map_inner p{
-    font-size: 13px;
-}
-.map_bind{
-   margin-top: 50px;
-    border-radius: 30px;
-    overflow: hidden;
-}
-
-
-</style>
